@@ -148,7 +148,6 @@ main section {
     padding-bottom: var(--spacing-lg);
 }
 
-/* Primary featured menu item card (e.g. Cappuccino) */
 .menu-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
