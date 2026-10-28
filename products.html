@@ -39,6 +39,45 @@
         <hr>
 
         <section>
+            <h2>Find Your Favourite</h2>
+            <p>Search our menu by name or ingredient, filter by category and sort by name or price.</p>
+
+            <div class="search-controls">
+                <div>
+                    <label for="menuSearch">Search:</label><br>
+                    <input type="search" id="menuSearch" placeholder="e.g. croissant, latte, chocolate">
+                </div>
+
+                <div>
+                    <label for="menuCategory">Category:</label><br>
+                    <select id="menuCategory">
+                        <option value="all">All categories</option>
+                        <option value="Hot Beverages">Hot Beverages</option>
+                        <option value="Fresh Bakery &amp; Sweet Treats">Fresh Bakery &amp; Sweet Treats</option>
+                        <option value="Breakfast &amp; Combo Meals">Breakfast &amp; Combo Meals</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label for="menuSort">Sort by:</label><br>
+                    <select id="menuSort">
+                        <option value="default">Menu order</option>
+                        <option value="name">Name (A to Z)</option>
+                        <option value="price-low">Price (low to high)</option>
+                        <option value="price-high">Price (high to low)</option>
+                    </select>
+                </div>
+            </div>
+
+            <p><button type="button" id="menuClear" class="button-secondary">Clear Filters</button></p>
+
+            <p id="menuCount" aria-live="polite"></p>
+            <div id="menuResults" class="search-results"></div>
+        </section>
+
+        <hr>
+
+        <section>
             <h2>Hot Beverages</h2>
 
             <div class="menu-grid">
@@ -126,5 +165,6 @@
         <p>&copy; 2026 Kevin's Cafe. ST10514675.</p>
     </footer>
 
+    <script src="js/menu-search.js"></script>
 </body>
 </html>
