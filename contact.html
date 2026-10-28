@@ -7,6 +7,8 @@
     <meta name="description" content="Find Kevin's Cafe in Strubenvale and Springs Central Mall. Get our phone number, email and branch addresses, or send us a message.">
     <meta name="keywords" content="contact Kevin's Cafe, cafe Strubenvale, Springs Central Mall, cafe address, cafe phone number">
     <link rel="stylesheet" href="css/style.css">
+    <!-- Leaflet map library stylesheet -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
 </head>
 <body>
 
@@ -45,19 +47,24 @@
         <hr>
 
         <section>
-            <h2>Our Branch Location</h2>
-            <p>Visit us at either of our locations:</p>
+            <h2>Our Branch Locations</h2>
+            <p>Visit us at either of our locations. Use the buttons or click a marker on the map to see the address and get directions.</p>
             
             <ul>
                 <li><strong>Main Branch (Strubenvale):</strong> 49 Modder B Close, Strubenvale, Springs, 1559</li>
                 <li><strong>Secondary Branch (Central Mall):</strong> Shop 12, Springs Central Mall, Springs, 1560</li>
             </ul>
 
-            <h3>Strubenvale Location Map</h3>
-            <iframe 
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14300.000000000000!2d28.460000000000000!3d-26.250000000000000!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1e95213600000000%3A0x0!2sStrubenvale%2C%20Springs!5e0!3m2!1sen!2sza!4v1700000000000!5m2!1sen!2sza" 
-                loading="lazy">
-            </iframe>
+            <h3>Find Us on the Map</h3>
+
+            
+            <div class="map-buttons">
+                <button type="button" class="button-secondary" data-branch="0">Show Strubenvale</button>
+                <button type="button" class="button-secondary" data-branch="1">Show Central Mall</button>
+                <button type="button" class="button-secondary" data-branch="all">Show Both Branches</button>
+            </div>
+
+            <div id="map" role="region" aria-label="Map showing both Kevin's Cafe branches"></div>
         </section>
 
         <hr>
@@ -123,6 +130,8 @@
         <p>&copy; 2026 Kevin's Cafe. ST10514675.</p>
     </footer>
 
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="js/map.js"></script>
     <script src="js/contact.js"></script>
 </body>
 </html>
