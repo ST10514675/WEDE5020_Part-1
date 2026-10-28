@@ -65,26 +65,54 @@
         <section>
             <h2>Send Us a Direct Message</h2>
             
-            <form action="#" method="post">
+            <form id="contactForm" action="#" method="post" novalidate>
                 <p>
                     <label for="contact_name">Name:</label><br>
-                    <input type="text" id="contact_name" name="contact_name" required placeholder="Your name">
+                    <input type="text" id="contact_name" name="contact_name" placeholder="Your name">
+                    <span class="error" id="contact_name_error"></span>
                 </p>
 
                 <p>
                     <label for="contact_email">Email:</label><br>
-                    <input type="email" id="contact_email" name="contact_email" required placeholder="Your email address">
+                    <input type="email" id="contact_email" name="contact_email" placeholder="Your email address">
+                    <span class="error" id="contact_email_error"></span>
+                </p>
+
+                <p>
+                    <label for="contact_phone">Phone (optional):</label><br>
+                    <input type="tel" id="contact_phone" name="contact_phone" placeholder="e.g. 0817837543">
+                    <span class="error" id="contact_phone_error"></span>
+                </p>
+
+                <p>
+                    <label for="contact_type">Type of Message:</label><br>
+                    <select id="contact_type" name="contact_type">
+                        <option value="">Choose a message type</option>
+                        <option value="General message">General message</option>
+                        <option value="Compliment">Compliment</option>
+                        <option value="Complaint">Complaint</option>
+                        <option value="Supplier or partnership">Supplier or partnership</option>
+                    </select>
+                    <span class="error" id="contact_type_error"></span>
                 </p>
 
                 <p>
                     <label for="contact_message">Message:</label><br>
-                    <textarea id="contact_message" name="contact_message" rows="5" cols="40" required placeholder="Write your message..."></textarea>
+                    <textarea id="contact_message" name="contact_message" rows="5" cols="40" placeholder="Write your message..."></textarea>
+                    <span class="error" id="contact_message_error"></span>
                 </p>
 
                 <p>
                     <button type="submit">Send Message</button>
+                    <button type="reset">Clear Form</button>
                 </p>
             </form>
+
+            <div id="contactResult" class="form-result" aria-live="polite" hidden>
+                <h3>Your email is ready to send</h3>
+                <p id="emailPreview"></p>
+                <a id="sendEmailLink" class="button-link" href="#">Open in my email app</a>
+            </div>
         </section>
 
     </main>
@@ -95,5 +123,6 @@
         <p>&copy; 2026 Kevin's Cafe. ST10514675.</p>
     </footer>
 
+    <script src="js/contact.js"></script>
 </body>
 </html>
