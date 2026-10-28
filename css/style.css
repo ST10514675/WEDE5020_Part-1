@@ -393,3 +393,49 @@ main a:hover {
         height: 250px;
     }
 }
+
+.error {
+    display: block;
+    color: #B3261E;
+    font-size: 0.875rem;
+    margin-top: 0.25rem;
+}
+
+input.invalid,
+select.invalid,
+textarea.invalid {
+    border-color: #B3261E;
+}
+
+.form-result {
+    background-color: var(--color-white);
+    border-left: 4px solid var(--color-accent);
+    border-radius: var(--radius);
+    padding: var(--spacing-md);
+    margin-top: var(--spacing-md);
+}
+
+.form-result[hidden] {
+    display: none;
+}
+
+#emailPreview {
+    white-space: pre-line;
+}
+
+.button-link {
+    display: inline-block;
+    font-family: var(--font-heading);
+    font-weight: 600;
+    background-color: var(--color-accent);
+    color: var(--color-white);
+    padding: 0.75rem 1.5rem;
+    border-radius: var(--radius);
+    margin-top: var(--spacing-sm);
+}
+
+.button-link:hover {
+    background-color: #b8895c;
+    color: var(--color-white);
+    text-decoration: none;
+}
