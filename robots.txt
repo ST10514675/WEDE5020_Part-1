@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://st10514675.github.io/WEDE5020_Part-1/sitemap.xml
