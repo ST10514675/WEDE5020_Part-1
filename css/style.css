@@ -518,3 +518,170 @@ textarea.invalid {
         height: 300px;
     }
 }
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: var(--spacing-sm);
+}
+
+.gallery-item {
+    padding: 0;
+    border: none;
+    background-color: transparent;
+    border-radius: var(--radius);
+    overflow: hidden;
+    cursor: zoom-in;
+    box-shadow: 0 2px 8px rgba(44, 26, 29, 0.1);
+}
+
+.gallery-item:hover {
+    background-color: transparent;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.gallery-item:hover img,
+.gallery-item:focus-visible img {
+    transform: scale(1.05);
+}
+
+.gallery-item:focus-visible {
+    outline: 3px solid var(--color-accent);
+    outline-offset: 2px;
+}
+
+.lightbox {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 2000;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: var(--spacing-md);
+    background-color: rgba(44, 26, 29, 0.92);
+}
+
+.lightbox[hidden] {
+    display: none;
+}
+
+.lightbox img {
+    max-width: 90vw;
+    max-height: 75vh;
+    object-fit: contain;
+    border-radius: var(--radius);
+}
+
+.lightbox-caption {
+    color: var(--color-secondary);
+    text-align: center;
+    max-width: 90vw;
+    margin-top: var(--spacing-sm);
+}
+
+.lightbox-close,
+.lightbox-nav {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 3rem;
+    height: 3rem;
+    padding: 0;
+    border: none;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.15);
+    color: var(--color-white);
+    font-size: 2rem;
+    line-height: 1;
+}
+
+.lightbox-close:hover,
+.lightbox-nav:hover {
+    background-color: var(--color-accent);
+}
+
+.lightbox-close {
+    top: 1rem;
+    right: 1rem;
+}
+
+.lightbox-nav {
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.lightbox-nav:active {
+    transform: translateY(-50%) scale(0.95);
+}
+
+.lightbox-prev {
+    left: 1rem;
+}
+
+.lightbox-next {
+    right: 1rem;
+}
+
+.accordion h3 {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.accordion-item {
+    background-color: var(--color-white);
+    border-radius: var(--radius);
+    box-shadow: 0 2px 8px rgba(44, 26, 29, 0.1);
+    margin-bottom: var(--spacing-xs);
+    overflow: hidden;
+}
+
+.accordion-button {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: var(--spacing-sm);
+    width: 100%;
+    text-align: left;
+    background-color: var(--color-white);
+    color: var(--color-primary);
+    border-radius: 0;
+    padding: var(--spacing-sm) var(--spacing-md);
+    font-size: 1rem;
+}
+
+.accordion-button::after {
+    content: "+";
+    font-size: 1.5rem;
+    color: var(--color-accent);
+}
+
+.accordion-button[aria-expanded="true"]::after {
+    content: "\2212";
+}
+
+.accordion-button:hover {
+    background-color: var(--color-accent-light);
+}
+
+.accordion-panel {
+    padding: 0 var(--spacing-md) var(--spacing-sm);
+}
+
+.accordion-panel[hidden] {
+    display: none;
+}
+
+.accordion-panel p:last-child {
+    margin-bottom: 0;
+}
