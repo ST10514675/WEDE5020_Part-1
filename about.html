@@ -63,13 +63,100 @@
             </ul>
         </section>
 
+        <hr>
+
+        <section>
+            <h2>Photo Gallery</h2>
+            <p>Take a look around Kevin's Cafe. Click any photo to see it larger.</p>
+
+            <div class="gallery">
+                <button type="button" class="gallery-item">
+                    <img src="images/coffee-shop-interior-counter.jpg" alt="Inside Kevin's Cafe in Springs with a counter display of cakes and pastries" loading="lazy">
+                </button>
+                <button type="button" class="gallery-item">
+                    <img src="images/cappuccino-latte-art.jpg" alt="Hot cappuccino with latte art in a cup on a saucer" loading="lazy">
+                </button>
+                <button type="button" class="gallery-item">
+                    <img src="images/iced-cupcakes-display.jpg" alt="Display of fresh iced cupcakes with berries" loading="lazy">
+                </button>
+                <button type="button" class="gallery-item">
+                    <img src="images/croissant-coffee-breakfast.jpg" alt="Hot cappuccino served with warm butter croissants" loading="lazy">
+                </button>
+                <button type="button" class="gallery-item">
+                    <img src="images/coffee-and-tea-assortment.jpg" alt="Assortment of hot coffee and tea drinks" loading="lazy">
+                </button>
+                <button type="button" class="gallery-item">
+                    <img src="images/bakery-spread-croissant-muffin.jpg" alt="Assorted fresh pastries including croissants and muffins" loading="lazy">
+                </button>
+                <button type="button" class="gallery-item">
+                    <img src="images/toasted-sandwich-plate.jpg" alt="Toasted sandwich served on a plate" loading="lazy">
+                </button>
+                <button type="button" class="gallery-item">
+                    <img src="images/cafe-staff-order-counter.jpg" alt="Kevin's Cafe baristas behind the order counter in Springs" loading="lazy">
+                </button>
+            </div>
+        </section>
+
+        <hr>
+
+        <section>
+            <h2>Frequently Asked Questions</h2>
+            <p>Click a question to see the answer.</p>
+
+            <div class="accordion">
+                <div class="accordion-item">
+                    <h3><button type="button" class="accordion-button" id="faqButton1" aria-expanded="false" aria-controls="faqPanel1">Do you cater for events?</button></h3>
+                    <div class="accordion-panel" id="faqPanel1" role="region" aria-labelledby="faqButton1" hidden>
+                        <p>Yes. Catering starts at 10 guests at R85 per guest. Send us an enquiry with your date and number of guests and we will email you a quote.</p>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <h3><button type="button" class="accordion-button" id="faqButton2" aria-expanded="false" aria-controls="faqPanel2">Can I book a table?</button></h3>
+                    <div class="accordion-panel" id="faqPanel2" role="region" aria-labelledby="faqButton2" hidden>
+                        <p>Yes. You can book a table for up to 12 guests on our Enquiries page. For bigger groups, choose a catering request instead.</p>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <h3><button type="button" class="accordion-button" id="faqButton3" aria-expanded="false" aria-controls="faqPanel3">Where are your branches?</button></h3>
+                    <div class="accordion-panel" id="faqPanel3" role="region" aria-labelledby="faqButton3" hidden>
+                        <p>We have a main branch in Strubenvale and a second branch at Springs Central Mall. See the Contact Us page for the addresses and a map.</p>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <h3><button type="button" class="accordion-button" id="faqButton4" aria-expanded="false" aria-controls="faqPanel4">Do you have caffeine-free drinks?</button></h3>
+                    <div class="accordion-panel" id="faqPanel4" role="region" aria-labelledby="faqButton4" hidden>
+                        <p>Yes. Our rooibos tea and our hot chocolate are both good caffeine-free choices (hot chocolate contains a small amount of natural caffeine from cocoa).</p>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <h3><button type="button" class="accordion-button" id="faqButton5" aria-expanded="false" aria-controls="faqPanel5">Is there a quiet place to study or read?</button></h3>
+                    <div class="accordion-panel" id="faqPanel5" role="region" aria-labelledby="faqButton5" hidden>
+                        <p>Yes. We have comfortable seating and quiet spots where you can read or study with a coffee.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div id="lightbox" class="lightbox" role="dialog" aria-modal="true" aria-label="Image viewer" hidden>
+            <button type="button" id="lightboxClose" class="lightbox-close" aria-label="Close image">&times;</button>
+            <button type="button" id="lightboxPrev" class="lightbox-nav lightbox-prev" aria-label="Previous image">&#8249;</button>
+            <img id="lightboxImage" src="" alt="">
+            <button type="button" id="lightboxNext" class="lightbox-nav lightbox-next" aria-label="Next image">&#8250;</button>
+            <p id="lightboxCaption" class="lightbox-caption"></p>
+        </div>
+
     </main>
 
     <hr>
 
     <footer>
-        <p>&copy; 2026 Kevin's Cafe. ST10514675 .</p>
+        <p>&copy; 2026 Kevin's Cafe. ST10514675.</p>
     </footer>
 
+    <script src="js/about.js"></script>
 </body>
 </html>
